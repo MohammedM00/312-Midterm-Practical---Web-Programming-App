@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f0f0f0; /* Purdue light gray */
+    color: #333;
+}
+
+header {
+    background-color: #000000; /* Purdue light blue */
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cfb991; /* Similar to original */
+}
+
+.logo {
+    width: 160px;
+    height: 80px;
+    background-image: url("img/logo_black_background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f0f0f0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #6d5f44;
+}
+
+section {
+    background-color: #695d47; /* Similar to original */
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1,
+h2,
+h3 {
+    color: #000000; /* Black */
+}
+
+p {
+    color: #555555; /* Dark gray */
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -1em;
+    padding: 40px;
+    background-color: #f0f0f0; /* Purdue light gray */
+}
+
+.card {
+    background: #ffffff; /* White */
+    margin-bottom: 2em;
+    max-height: 300px;
+    flex: 1 1 250px;
+    position: relative;
+    margin: 30px;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flip-card {
+    display: none; /* Remove the flip card */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%; /* Circular shape */
+}
+
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    width: 250px;
+    height: 3px;
+    background-color: #ffffff; /* White */
+    margin: 5px 0;
+}
+
+.bar.active {
+    display: none;
+}
+
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.recipe-container pre {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+
+.recipe-card {
+    background-color: #cfb991; /* Similar to original */
+    border: 3px dotted #b8a581; /* Modified border */
+    border-radius: 20px; /* Modified rounded border */
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+
+    .right-sidebar {
+        flex: 1;
+        order: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-list,
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu-list.active,
+    .nav-links.active {
+        display: block;
+    }
+
+    .recipe-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipe-flipcard {
+        width: 80%;
+    }
+}
